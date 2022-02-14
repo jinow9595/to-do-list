@@ -1,0 +1,37 @@
+a {
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+}
+
+ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+ul li {
+  list-style: none;
+  margin-left: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+img {
+  margin-top: 20px;
+}
+
+#main-form,
+#login-form {
+  margin: 20px;
+}
+
+#login-form div {
+  display: flex;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
