@@ -4,11 +4,6 @@ a {
   text-decoration: none;
 }
 
-ul {
-  display: flex;
-  justify-content: flex-end;
-}
-
 ul li {
   list-style: none;
   margin-left: 10px;
@@ -25,6 +20,11 @@ img {
 #main-form,
 #login-form {
   margin: 20px;
+}
+
+#main-form ul:first-child {
+  display: flex;
+  justify-content: flex-end;
 }
 
 #login-form div {
