@@ -2,39 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Todo List</title>
+    <title>TODO LIST</title>
     <link rel="stylesheet" href="src/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9dda4b9713.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="main-form" class="hidden">
-        <ul>
-            <li>user id</li>
-            <li>
-                <button>logout</button>
-            </li>
-        </ul>
-        <h1>00:00:00</h1>
-        <form action="" id="todo-form">
-            <input type="text" placeholder="INPUT TODO LIST" required>
+    <header>
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <form action="" id="bgKeywordForm">
+            
+            <input type="text">
         </form>
-        <ul id="todo-list">
-        </ul>
-        <h1>quotes</h1>
-        <div id="weather">
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-    <form action="" id="login-form" class="hidden">
+    </header>
+
+    <section class="main-section" class="">
         <div>
-            <input type="text" placeholder="INPUT ID" maxlength="10" required>
-            <input type="submit" value="login">
+            <h1>00:00</h1>
         </div>
-    </form> 
-    <script src="src/js/login.js"></script>
+
+        <form action="" id="nameForm" class="">
+            <div>
+                <input type="text" placeholder="Type your name here" maxlength="30" required>
+            </div>
+            <div>
+                <span></span>
+            </div>
+        </form>
+
+        <form action="" id="todoListForm">
+            <input type="text" placeholder="Write a To Do here" required>
+        </form>
+
+        <div>
+            <ul class="todo-list">
+            </ul>
+        </div>
+    </section>
+
+    <footer>날씨 API</footer>
+
+    <script src="src/js/greeting.js"></script>
     <script src="src/js/clock.js"></script>
-    <script src="src/js/quotes.js"></script>
-    <script src="src/js/background-images.js"></script>
+    <script src="src/js/bg.js"></script>
     <script src="src/js/todo.js"></script>
     <script src="src/js/weather.js"></script>
 </body>
