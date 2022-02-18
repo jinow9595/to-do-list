@@ -1,27 +1,41 @@
 const HIDDEN_CLASS = "hidden"
 
-const mainForm = document.querySelector(".main-section");
-const clock = mainForm.querySelector("h1");
+const nameForm = document.querySelector("#nameForm");
+const inputName = nameForm.querySelector("input");
+const greeting = nameForm.querySelector("div div");
+const logoutButton = greeting.querySelector("i");
 
+inputName.focus();
 checkLogin();
 
+nameForm.addEventListener("submit", preventLoginSubmit);
+logoutButton.addEventListener("click", logout);
 
-//localStorage
+function logout() {
+    localStorage.removeItem("id");
+    inputName.value = "";
+
+    checkLogin();
+}
 
 function checkLogin() {
     const savedId = localStorage.getItem("id");
+    const nameSpan = greeting.querySelector("span");
 
     if (savedId === null) {
+        inputName.classList.remove(HIDDEN_CLASS);
+        greeting.classList.add(HIDDEN_CLASS);
     } else {
-        //userID.innerText = `Hello, ${savedId}`;
+        nameSpan.innerText = `Hello, ${savedId}`;
 
-        mainForm.classList.remove(HIDDEN_CLASS);
+        inputName.classList.add(HIDDEN_CLASS);
+        greeting.classList.remove(HIDDEN_CLASS);
     }
 }
 
 function preventLoginSubmit(e) {
     e.preventDefault(); // 브라우저 기본 동작을 막아줌 ex) submit -> 새로고침 x
-    localStorage.setItem("id", inputLoginID.value);
+    localStorage.setItem("id", inputName.value);
 
     checkLogin();
 }

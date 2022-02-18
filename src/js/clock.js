@@ -1,4 +1,7 @@
-const timeText = document.querySelector("h1");
+const clockText = document.querySelector("h1");
+const hourText = clockText.querySelector("span:first-child");
+const colon = clockText.querySelector("span:nth-child(2)");
+const minText = clockText.querySelector("span:last-child");
 
 clockHandler();
 
@@ -9,8 +12,15 @@ setInterval(clockHandler, 1000); // setInterval 다시 호출 시 이전 함수�
 function clockHandler() {
     const date = new Date();
 
-    const Hours = String(date.getHours()).padStart(2, "0");
+    const hours = String(date.getHours()).padStart(2, "0");
     const minutes = String(date.getMinutes()).padStart(2, "0");
+    const seconds = String(date.getSeconds()).padStart(2, "0");
 
-    timeText.innerText = `${Hours}:${minutes}`;
+    hourText.innerText = `${hours}`;
+    minText.innerText = `${minutes}`;
+
+    if (seconds % 2 === 0)
+        colon.style.visibility = "";
+    else
+        colon.style.visibility = "hidden";
 }

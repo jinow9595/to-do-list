@@ -11,16 +11,10 @@ if (getTodoLists) {
     const parsedTodoLists = JSON.parse(getTodoLists);
 
     todoLists = parsedTodoLists;
-
-    // parsedTodoLists.forEach(loadTodoLists);
     parsedTodoLists.forEach((item) => addTodo(item));
 }
 
 todoForm.addEventListener("submit", submitTodo);
-
-// function loadTodoLists(item) {
-//     addTodo(item);
-// }
 
 function submitTodo(e) {
     e.preventDefault();
@@ -32,10 +26,16 @@ function submitTodo(e) {
     }
 
     todoInput.value = "";
-    todoLists.push(todoObj);
 
-    addTodo(todoObj);
-    saveTodo();
+    if (todoLists.length < 15) {
+        todoLists.push(todoObj);
+
+        addTodo(todoObj);
+        saveTodo();
+    } else {
+        alert("remove before add");
+    }
+
 }
 
 function addTodo(todoObj) {
@@ -43,12 +43,12 @@ function addTodo(todoObj) {
     const span = document.createElement("span");
     const button = document.createElement("button");
 
+    button.innerText = "❌";
     li.id = todoObj.id;
     span.innerText = todoObj.text;
-    button.innerText = "X";
 
+    li.appendChild(button);
     li.appendChild(span);
-    li.appendChild(button)
     todoList.appendChild(li);
 
     button.addEventListener("click", deleteTodo);

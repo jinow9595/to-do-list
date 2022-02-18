@@ -5,6 +5,28 @@ html {
   width: 100%;
   margin: 0;
   padding: 0;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  opacity: 0.6;
+}
+
+header div i {
+  font-size: 30px;
+  margin-right: 10px;
 }
 
 section {
@@ -12,11 +34,120 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: absolute;
+  top: 120px;
+}
+
+section h1 {
+  opacity: 0.8;
+}
+
+footer {
+  color: white;
+  opacity: 0.6;
+}
+
+footer div {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 20px;
+  bottom: 4px;
+  font-style: italic;
+}
+
+input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  color: white;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  color: white;
 }
 
 ul li {
   list-style: none;
   margin-left: 10px;
+}
+
+ul li button {
+  background: transparent;
+  border: none;
+}
+
+i {
+  color: white;
+  cursor: pointer;
+}
+
+h1 {
+  margin: 0;
+  color: white;
+  font-size: 200px;
+}
+
+span {
+  color: white;
+  margin: 0;
+}
+
+#bgSearchForm input {
+  font-size: 16px;
+  width: 202px;
+  margin-right: 20px;
+}
+
+#nameForm {
+  opacity: 0.7;
+}
+
+#nameForm div {
+  margin-bottom: 30px;
+}
+
+#nameForm input {
+  font-size: 40px;
+  width: 354px;
+}
+
+#nameForm span {
+  font-size: 40px;
+}
+
+#nameForm i {
+  margin-left: 10px;
+  font-size: 30px;
+}
+
+#todoListForm {
+  opacity: 0.7;
+}
+
+#todoListForm input {
+  font-size: 24px;
+  width: 284px;
+}
+
+.toggle-div {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-div span {
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.todo-list {
+  opacity: 0.8;
+  color: white;
+  font-size: 20px;
 }
 
 .hidden {

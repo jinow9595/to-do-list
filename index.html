@@ -4,45 +4,61 @@
     <meta charset="UTF-8">
     <title>TODO LIST</title>
     <link rel="stylesheet" href="src/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9dda4b9713.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <form action="" id="bgKeywordForm">
-            
-            <input type="text">
+        <div class="toggle-div">
+            <span>text color</span>
+            <div class="toggle-switch">
+                <i class="fa-solid fa-toggle-off" value="OFF"></i>
+                <i class="fa-solid fa-toggle-on" value="ON"></i>
+            </div>
+        </div>
+
+        <form action="" id="bgSearchForm">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search random background" maxlength="30">
         </form>
     </header>
 
     <section class="main-section" class="">
         <div>
-            <h1>00:00</h1>
+            <h1>
+                <span>00</span>
+                <span>:</span>
+                <span>00</span>
+            </h1>
         </div>
 
         <form action="" id="nameForm" class="">
             <div>
-                <input type="text" placeholder="Type your name here" maxlength="30" required>
+                <input class="hidden" type="text" placeholder="Type your name here" maxlength="14" required>
+                <div class="hidden">
+                    <span></span>
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                </div>
             </div>
-            <div>
-                <span></span>
-            </div>
-        </form>
-
-        <form action="" id="todoListForm">
-            <input type="text" placeholder="Write a To Do here" required>
         </form>
 
         <div>
+            <form action="" id="todoListForm">
+                <input type="text" placeholder="Write a to do here" maxlength="20" required>
+            </form>
+
             <ul class="todo-list">
             </ul>
         </div>
     </section>
 
-    <footer>날씨 API</footer>
+    <footer>
+        <div>
+            <span>weather api</span>
+        </div>
+    </footer>
 
     <script src="src/js/greeting.js"></script>
     <script src="src/js/clock.js"></script>
