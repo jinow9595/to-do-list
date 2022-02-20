@@ -84,14 +84,14 @@ function getRandomBackground(e) {
 
     if (keyword) {
         e.preventDefault();
-        /*fetch(`https://source.unsplash.com/random/?${keyword}`).then(response => {
+        fetch(`https://source.unsplash.com/random/?${keyword}`).then(response => {
             bodyStyle.backgroundImage = `url(${response.url})`
         }).catch(error => {
             console.log(error);
             bodyStyle.backgroundColor = "black";
-        });*/
+        });
         // bodyStyle.backgroundImage = `url(https://source.unsplash.com/random/?${keyword})`; // 기존에 검색했던 키워드로 재검색 시 이전 검색 배경 노출됨
     } else {
-        // bodyStyle.backgroundImage = `url(https://source.unsplash.com/random/)`;
+        bodyStyle.backgroundImage = `url(https://source.unsplash.com/random/)`;
     }
 }
