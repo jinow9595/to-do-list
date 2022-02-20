@@ -15,7 +15,7 @@ function successGeo(position) {
         weatherImg.style.marginLeft = "10px";
 
         weatherSpan.innerText = `${data.name}, ${data.main.temp}°C`;
-        weatherImg.src = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+        weatherImg.src = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
 
         weatherSpan.parentNode.appendChild(weatherImg);
     }));
