@@ -26,16 +26,10 @@ function submitTodo(e) {
     }
 
     todoInput.value = "";
+    todoLists.push(todoObj);
 
-    if (todoLists.length < 15) {
-        todoLists.push(todoObj);
-
-        addTodo(todoObj);
-        saveTodo();
-    } else {
-        alert("remove before add");
-    }
-
+    addTodo(todoObj);
+    saveTodo();
 }
 
 function addTodo(todoObj) {

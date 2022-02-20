@@ -144,6 +144,8 @@ span {
   opacity: 0.8;
   color: white;
   font-size: 20px;
+  height: 400px;
+  overflow: auto;
 }
 
 .hidden {
