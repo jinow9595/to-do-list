@@ -13,8 +13,7 @@ function successGeo(position) {
         const weatherImg = document.createElement("img");
 
         weatherImg.style.marginLeft = "10px";
-
-        weatherSpan.innerText = `${data.name}, ${data.main.temp}°C`;
+        weatherSpan.innerText = `${data.name}, ${data.main.temp}°C, ${data.wind.speed}m/s`;
         weatherImg.src = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
 
         weatherSpan.parentNode.appendChild(weatherImg);
