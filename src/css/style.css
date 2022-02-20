@@ -134,14 +134,13 @@ span {
   width: 284px;
 }
 
+.main-section {
+}
+
 .toggle-div {
   display: flex;
   align-items: center;
-}
-
-.toggle-div span {
   margin-left: 20px;
-  margin-right: 10px;
 }
 
 .todo-list {
@@ -152,4 +151,8 @@ span {
 
 .hidden {
   display: none;
+}
+
+.placeholder-black::placeholder {
+  color: black;
 }
